@@ -12,7 +12,7 @@ These are deliberately proposed defects for a scratch branch. They are not claim
 
 ### Worked diagnosis
 
-First state the expected contract: Each factory call owns a private next value. A new counter first emits zero, includes its limit before wrapping, notifies once with that emitted value and returns it. State advances before notification, including when an observer throws. Then create the smallest example from the experiment above. Compare the observed result with the contract before changing more code. The likely cause is at this boundary: **Allocate state separately inside every factory invocation.**. Repair that boundary, rerun the example, and check one neighboring valid case so the repair does not merely special-case the chosen input.
+First state the expected contract: Each factory call owns a private next value. A new counter first emits zero, includes its limit before wrapping, notifies once with that emitted value and returns it. State advances before notification, including when an observer throws. Then create the smallest example from the experiment above. Compare the observed result with the contract before changing more code. The likely cause is at this boundary: **Allocate state separately inside every factory invocation.** Repair that boundary, rerun the example, and check one neighboring valid case so the repair does not merely special-case the chosen input.
 
 The completed reasoning record is: symptom → contract violated → input that distinguishes hypotheses → owning line or rule → minimal repair → regression evidence. This is a worked diagnostic route; fill in your actual outputs when you run it. No invented console transcript is supplied.
 
