@@ -1,0 +1,53 @@
+# M010 — Independent Click Counters
+
+Two practice stations need counters that never share accidental state.
+
+This is a complete small **reference implementation and learning workshop** for the first ten MASTERPLAN builds. Study the choices, then make your own variation. The reference is finished; the exercises and your journal are deliberately unfinished.
+
+**Main skill:** Closures and callback contracts. **Study pairing:** existing curriculum #10, [JS-Exercise-Closures-Callbacks-ArrayMethods](https://github.com/elirc/JS-Exercise-Closures-Callbacks-ArrayMethods). [Previous](https://github.com/elirc/masterplan-009-score-sheet-reconciler)
+
+## Run it
+
+Use Git and Node.js 22 or newer. There are **no package dependencies to install**.
+
+```sh
+git clone https://github.com/elirc/masterplan-010-independent-click-counters.git
+cd masterplan-010-independent-click-counters
+npm test
+npm start
+```
+
+Open http://127.0.0.1:4300 and leave the terminal running. Stop with Ctrl+C. Run one project at a time, or use a different PORT for a second server. On PowerShell: `$env:PORT=4301` before `npm start`. The preview serves only public/ on your own computer.
+
+`private: true` in package.json prevents accidental npm publication; it does not make this GitHub repository private. The GitHub repository is intended to be public.
+
+## What the reference promises
+
+Each factory call owns a private next value. A new counter first emits zero, includes its limit before wrapping, notifies once with that emitted value and returns it. State advances before notification, including when an observer throws.
+
+Focuses on isolated closure state and inclusive wrap behavior already highlighted by the source assignment.
+
+## Read in this order
+
+1. [Learning route](docs/00-START-HERE.md): a manageable session plan and readiness check.
+2. [Build walkthrough](docs/01-BUILD-WALKTHROUGH.md): build from requirements to the smallest verified result.
+3. [Concepts and execution traces](docs/02-CONCEPTS-AND-TRACES.md): predict, trace and explain the real code.
+4. [Code tour and architecture choices](docs/03-CODE-TOUR.md): exact files and responsibilities.
+5. [Debugging laboratory](docs/04-DEBUGGING-LAB.md): one worked diagnosis and two guided investigations.
+6. [Six learner stories](docs/05-PRACTICE-STORIES.md): features and fixes with plans, acceptance criteria and decisions left to you.
+7. [Hints and answer directions](docs/06-HINTS-AND-ANSWERS.md): consult after an attempt.
+8. [Agentic coaching prompts](docs/07-AGENTIC-COACHING.md): ask for help without outsourcing the learning.
+9. [Build journal and decision narrative](docs/08-BUILD-JOURNAL.md): a retrospective explanation grounded in the actual implementation.
+10. [Verification](docs/VERIFICATION.md) and [blank journal](docs/JOURNAL-TEMPLATE.md).
+
+![Reference screenshot](docs/images/preview.png)
+
+## Know what the checks prove
+
+npm test runs the pure JavaScript boundary regressions. Browser evidence separately covers form interaction, error recovery, layout and keyboard entry.
+
+This is a local educational example with fictional content. There is no production deployment, external data integration, tracking, authentication or payment flow. Do not mistake the deliberately small scope for a template that already solves those additional concerns.
+
+## Your first independent task
+
+Add a third station: Create a third counter instance and UI controls without sharing the first two instances. Read its acceptance criteria, create a practice branch, and write your prediction before changing code. Keep your personal notes in `my-journal/`, which is ignored by Git.

@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-03T22:01:58.297797+00:00",
+  "nodeVersion": "v22.16.0",
+  "nodeChecks": {
+    "command": "node --test",
+    "exitCode": 0,
+    "tests": 7,
+    "output": "TAP version 13\n# Subtest: first value is zero and the inclusive limit is emitted\nok 1 - first value is zero and the inclusive limit is emitted\n  ---\n  duration_ms: 12.0916\n  type: 'test'\n  ...\n# Subtest: interleaved instances own independent state\nok 2 - interleaved instances own independent state\n  ---\n  duration_ms: 0.8066\n  type: 'test'\n  ...\n# Subtest: callback is called once with exactly the returned value\nok 3 - callback is called once with exactly the returned value\n  ---\n  duration_ms: 1.577\n  type: 'test'\n  ...\n# Subtest: zero limit always emits zero\nok 4 - zero limit always emits zero\n  ---\n  duration_ms: 0.7537\n  type: 'test'\n  ...\n# Subtest: invalid limits and callbacks fail at construction\nok 5 - invalid limits and callbacks fail at construction\n  ---\n  duration_ms: 1.9963\n  type: 'test'\n  ...\n# Subtest: state advances even if an observer throws\nok 6 - state advances even if an observer throws\n  ---\n  duration_ms: 2.1677\n  type: 'test'\n  ...\n# Subtest: one bounded reentrant observer sees the next value\nok 7 - one bounded reentrant observer sees the next value\n  ---\n  duration_ms: 1.2851\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 612.5191\n"
+  },
+  "browserChecks": {
+    "id": 10,
+    "status": "passed",
+    "checks": [
+      "No document horizontal overflow at 1200, 800, 500 and 320 CSS pixels",
+      "First Tab exposes skip link; Enter transfers focus to main",
+      "A/A/B/A interleaving, reset, inclusive wrapping and bounded callback log verified"
+    ],
+    "browser": "Installed Microsoft Edge via Playwright",
+    "checkedAt": "2026-10-03T21:55:36.750873+00:00",
+    "consoleErrors": []
+  },
+  "scope": "Actual local reference verification. Learner stories are not implemented. Remote CI results are separate."
+}
