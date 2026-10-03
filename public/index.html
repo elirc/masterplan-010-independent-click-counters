@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Independent Click Counters</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<div class="eyebrow">Fieldwork / Masterplan M010</div>
+<h1>Independent Click Counters</h1>
+<p class="lede">Two practice stations need counters that never share accidental state.</p>
+</header>
+<main id="main" tabindex="-1">
+<section class="panel">
+<h2>Two independent stations</h2>
+<p>Each station emits 0, 1, 2, 3, 4, 5, then wraps to 0. Start by predicting A, A, B, A.</p>
+<button id="a">Count at station A</button>
+<button id="b">Count at station B</button>
+<button class="secondary" id="reset">Reset both stations</button>
+<output id="result" aria-live="polite">No count emitted yet.</output>
+<p>Latest A: <strong id="latest-a">—</strong> · Latest B: <strong id="latest-b">—</strong>
+</p>
+</section>
+<section>
+<h2>Callback event log</h2>
+<p class="muted">The last 20 notifications are shown. Reset creates new closures and clears this log.</p>
+<ol id="events">
+</ol>
+</section>
+</main>
+<footer>Fictional local learning project. No account, tracking or external service. <a href="https://github.com/elirc/masterplan-010-independent-click-counters">Code and learning guide</a>
+</footer>
+<script type="module" src="app.js">
+</script>
+</body>
+</html>
