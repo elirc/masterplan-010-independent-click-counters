@@ -6,7 +6,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 01: Add a third station
 
-**Hint 1 — ownership:** Begin from `createCounter`. Create a third counter instance and UI controls without sharing the first two instances.
+**Hint 1 — ownership:** Begin from `reset` and `callbackFor` in `public/app.js`. Create a third counter instance and UI controls without sharing the first two instances.
 
 **Hint 2 — reasoning:** Revisit the decision “Create state inside the factory”. Ask yourself: Draw two separate boxes for A’s and B’s next values.
 
@@ -26,9 +26,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Reset one station only
 
-**Hint 1 — ownership:** Begin from `createCounter`. Recreate one closure and decide whether its old log entries remain.
+**Hint 1 — ownership:** Begin from `reset` in `public/app.js`. Recreate one closure and decide whether its old log entries remain.
 
-**Hint 2 — reasoning:** Revisit the decision “Advance before the callback”. Ask yourself: Explain why this policy does not make unbounded recursive callbacks safe.
+**Hint 2 — reasoning:** Revisit the decision “Create state inside the factory”. Ask yourself: Draw two separate boxes for A’s and B’s next values.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The other station’s next value is unchanged. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -36,9 +36,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Add a wrap notification
 
-**Hint 1 — ownership:** Begin from `createCounter`. Extend the observer contract with an explicit wrap event or metadata.
+**Hint 1 — ownership:** Begin from the `next = emitted === limit ? 0 : emitted + 1` line in `createCounter`. Extend the observer contract with an explicit wrap event or metadata.
 
-**Hint 2 — reasoning:** Revisit the decision “Create state inside the factory”. Ask yourself: Draw two separate boxes for A’s and B’s next values.
+**Hint 2 — reasoning:** Revisit the decision “Capture emitted before advancing”. Ask yourself: Explain what a pre-increment return would change about the first call.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The normal count value still agrees with the function’s return and the limit remains included. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -46,9 +46,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Show call counts separately
 
-**Hint 1 — ownership:** Begin from `createCounter`. Track how many times each station has been invoked as UI-owned information.
+**Hint 1 — ownership:** Begin from the click handlers in `public/app.js`. Track how many times each station has been invoked as UI-owned information.
 
-**Hint 2 — reasoning:** Revisit the decision “Capture emitted before advancing”. Ask yourself: Explain what a pre-increment return would change about the first call.
+**Hint 2 — reasoning:** Revisit the decision “Create state inside the factory”. Ask yourself: Draw two separate boxes for A’s and B’s next values.
 
 **Answer direction:** A defensible solution demonstrates this observable result: Invocation count does not wrap merely because the emitted counter value wraps. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 

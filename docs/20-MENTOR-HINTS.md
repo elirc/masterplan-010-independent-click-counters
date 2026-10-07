@@ -104,9 +104,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Temporarily prevent clicks without replacing counter state.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Disable one station button; keep its closure; resume through the same function reference.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Disable one station button; keep its closure; resume through the same function reference. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Pausing A does not reset A or affect B.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Pausing A does not reset A or affect B. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose pause wording and focus behavior. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -114,9 +114,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Inspect one station without changing execution.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Keep the complete bounded event log; derive visible rows by station ID; retain sequence order.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Keep the complete bounded event log; derive visible rows by station ID; retain sequence order. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Hiding B's rows does not stop B from advancing.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Hiding B's rows does not stop B from advancing. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whether counts reflect all or visible rows. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -124,9 +124,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Explain a valid degenerate counter.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Construct a counter with limit zero; trace repeated callbacks; compare invocation count with emitted value.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Construct a counter with limit zero; trace repeated callbacks; compare invocation count with emitted value. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Every emission is zero while calls remain distinct events.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Every emission is zero while calls remain distinct events. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose how to label the fixture. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -134,9 +134,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Add a bounded reentrancy regression.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Let the observer call the counter once; record outer and nested results; prevent unbounded recursion in the fixture.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Let the observer call the counter once; record outer and nested results; prevent unbounded recursion in the fixture. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Nested notification sees the next value and both returns match their own emissions.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Nested notification sees the next value and both returns match their own emissions. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a small inclusive limit. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -144,9 +144,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Separate log identity from the wrapping value.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Assign monotonically increasing UI event IDs; keep emitted counter values unchanged; render both.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Assign monotonically increasing UI event IDs; keep emitted counter values unchanged; render both. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Two emitted zeros have different event IDs after wrapping.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Two emitted zeros have different event IDs after wrapping. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whether numbering resets with the log. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -154,9 +154,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Distinguish display cleanup from counter reset.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Clear UI event rows; retain both closure references; label the action precisely.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Clear UI event rows; retain both closure references; label the action precisely. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The next click continues each counter's existing sequence.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The next click continues each counter's existing sequence. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whether sequence numbers also clear. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -164,9 +164,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Teach which dependencies a closure captures.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Build a scratch factory variant with explicit observer replacement; contrast it with recreating the whole counter; document state preservation.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Build a scratch factory variant with explicit observer replacement; contrast it with recreating the whole counter; document state preservation. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The experiment distinguishes changing an observer from resetting next.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The experiment distinguishes changing an observer from resetting next. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whether replacement belongs in the public API. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -174,9 +174,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Emit a small requested number of values.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Validate a small integer count; call the existing closure repeatedly; preserve ordinary notification order.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Validate a small integer count; call the existing closure repeatedly; preserve ordinary notification order. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: A burst across the limit emits the inclusive boundary then wraps.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: A burst across the limit emits the inclusive boundary then wraps. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a safe small burst cap. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -184,9 +184,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Explain what creating a new closure replaces.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Draw old and new references; show which UI handler changes; verify the other station keeps its state.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Draw old and new references; show which UI handler changes; verify the other station keeps its state. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The explanation does not claim reset mutates every closure made by the factory.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The explanation does not claim reset mutates every closure made by the factory. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a concrete interleaved sequence. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 

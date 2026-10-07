@@ -6,8 +6,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 01: Add a third station
 
-**User need:** As a learner or user of Independent Click Counters, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Create a third counter instance and UI controls without sharing the first two instances.
 
 **Implementation plan:**
@@ -26,8 +24,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 02: Make the limit configurable
-
-**User need:** As a learner or user of Independent Click Counters, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Let the user create new counters with a chosen nonnegative integer limit.
 
@@ -48,8 +44,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 03: Reset one station only
 
-**User need:** As a learner or user of Independent Click Counters, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Recreate one closure and decide whether its old log entries remain.
 
 **Implementation plan:**
@@ -68,8 +62,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 04: Add a wrap notification
-
-**User need:** As a learner or user of Independent Click Counters, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Extend the observer contract with an explicit wrap event or metadata.
 
@@ -90,8 +82,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 05: Show call counts separately
 
-**User need:** As a learner or user of Independent Click Counters, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Track how many times each station has been invoked as UI-owned information.
 
 **Implementation plan:**
@@ -110,8 +100,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 06: Explain callback failure behavior
-
-**User need:** As a learner or user of Independent Click Counters, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Write a small standalone experiment where the observer throws once.
 

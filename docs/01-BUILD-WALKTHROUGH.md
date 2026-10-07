@@ -14,29 +14,29 @@ The smallest useful result answers this user need: Two practice stations need co
 
 Write A, A, B, A, B and predict five returned values before running the app. If you expect B to continue A’s sequence, draw the scope created by each factory call. The key fact is not that the functions have different code; it is that they retain access to different instances of the next variable.
 
-**Pause and produce evidence:** limit 2, four calls. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** A, A, B, A, B. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 2: Make the boundary inclusive
 
 For limit 2, the supported sequence is 0, 1, 2, 0. Capture emitted from next, then set the next state to zero only after the current emitted value equals the limit. A comparison or increment in the wrong place can skip zero, skip the limit, or allow one value above the limit.
 
-**Pause and produce evidence:** A, A, B, A, B. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** limit 2, four calls. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 3: Specify the observer contract
 
 The callback receives one argument, exactly the value returned by the call. The function does not use the callback’s return value. If the callback throws, the current call throws too, but state has already advanced. This is a small example of why side-effect ordering belongs in a contract rather than being treated as incidental line order.
 
-**Pause and produce evidence:** limit 0. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Callback records arguments. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 4: Keep browser state separate from counter state
 
 The UI owns buttons, latest-value labels and a bounded event list. The core owns only numeric progression and notification. Reset constructs two new closures and clears the display. It does not reach into a closure to mutate a private variable. The event log is capped at twenty entries so repeated practice does not grow the DOM indefinitely.
 
-**Pause and produce evidence:** Callback records arguments. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Click A twice, Reset both stations, then click A again. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Keep the implementation reviewable
 
-A useful commit has one understandable reason to exist. Separate the initial working slice, the checks that expose its important boundaries, and the teaching material that explains it. The published commits in this repository were assembled from verified working files; they are real commits, not fabricated evidence of a long historical development process. M001 additionally contains the actual two-file baseline and a separate opening-time correction.
+A useful commit has one understandable reason to exist. Separate the initial working slice, the checks that expose its important boundaries, and the teaching material that explains it. The published commits in this repository were assembled from verified working files; they are real commits, not fabricated evidence of a long historical development process.
 
 For your own variation, commit at a point where the behavior and evidence agree. Describe the trigger, the resulting behavior and the check in the commit message or review note. Avoid mixing a rule change with unrelated formatting because it makes the learning decision harder to see.
 
